@@ -1,0 +1,300 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.uilzzw</groupId>
+	<artifactId>proxy-att</artifactId>
+	<version>0.0.1</version>
+	<packaging>war</packaging>
+
+	<properties>
+		<!-- Spring -->
+		<spring.version>4.2.6.RELEASE</spring.version>
+		<spring-core.version>4.2.6.RELEASE</spring-core.version>
+		<spring-context.version>4.2.6.RELEASE</spring-context.version>
+		<spring-context-support.version>4.2.6.RELEASE</spring-context-support.version>
+		<spring-tx.version>4.2.6.RELEASE</spring-tx.version>
+		<spring-aop.version>4.2.6.RELEASE</spring-aop.version>
+		<spring-web.version>4.2.6.RELEASE</spring-web.version>
+		<spring-webmvc.version>4.2.6.RELEASE</spring-webmvc.version>
+		<spring-jdbc.version>4.2.6.RELEASE</spring-jdbc.version>
+		<spring-oxm.version>4.2.6.RELEASE</spring-oxm.version>
+		<spring-test.version>4.2.6.RELEASE</spring-test.version>
+		<!-- Mybatis -->
+		<mybatis.version>3.4.0</mybatis.version>
+		<mybatis-spring.version>1.3.0</mybatis-spring.version>
+		<!-- JavaEE -->
+		<javaee-api.version>7.0</javaee-api.version>
+		<javaee-web-api.version>7.0</javaee-web-api.version>
+		<!-- commons -->
+		<commons-dbcp.version>1.4</commons-dbcp.version>
+		<commons-fileupload.version>1.3.1</commons-fileupload.version>
+		<commons-io.version>2.5</commons-io.version>
+		<commons-codec.version>1.10</commons-codec.version>
+		<!-- logging -->
+		<slf4j-api.version>1.7.21</slf4j-api.version>
+		<slf4j.version>1.7.21</slf4j.version>
+		<!-- json -->
+		<jackson-mapper-asl.version>1.9.13</jackson-mapper-asl.version>
+		<fastjson.version>1.2.12</fastjson.version>
+		<!-- database -->
+		<mysql-connector.version>6.0.2</mysql-connector.version>
+		<jedis.version>2.6.0</jedis.version>
+		<spring-data-redis.version>1.7.1.RELEASE</spring-data-redis.version>
+		<c3p0.version>0.9.1.2</c3p0.version>
+		<!-- other -->
+		<jstl.version>1.2</jstl.version>
+		<freemarker.version>2.3.23</freemarker.version>
+		<quartz.version>2.2.3</quartz.version>
+		<spring-rabbit.version>1.5.6.RELEASE</spring-rabbit.version>
+		<amqp-client.version>3.6.2</amqp-client.version>
+		<junit.version>4.11</junit.version>
+		<!-- spider-proxy -->
+		<spider-proxy.version>0.0.1</spider-proxy.version>
+	</properties>
+
+	<dependencies>
+		<!-- ======================================= -->
+		<!-- spring core -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring-core.version}</version>
+		</dependency>
+		<!-- Spring Context -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring-context.version}</version>
+		</dependency>
+		<!-- spring-context-support -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${spring-context-support.version}</version>
+		</dependency>
+		<!-- Spring tx -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring-tx.version}</version>
+		</dependency>
+		<!-- spring-aop -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${spring-aop.version}</version>
+		</dependency>
+		<!-- spring-web -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring-web.version}</version>
+		</dependency>
+		<!-- Spring-Webmvc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring-webmvc.version}</version>
+		</dependency>
+		<!-- Spring-JDBC -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring-jdbc.version}</version>
+		</dependency>
+		<!-- spring-oxm -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-oxm</artifactId>
+			<version>${spring-oxm.version}</version>
+		</dependency>
+		<!-- spring-test -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring-test.version}</version>
+		</dependency>
+		<!-- ======================================= -->
+		<!-- Mybatis -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${mybatis.version}</version>
+		</dependency>
+		<!-- mybatis-spring -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>${mybatis-spring.version}</version>
+		</dependency>
+		<!-- ======================================= -->
+		<!-- javaee-api -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>${javaee-api.version}</version>
+		</dependency>
+		<!-- javaee-web-api -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-web-api</artifactId>
+			<version>${javaee-web-api.version}</version>
+		</dependency>
+		<!-- ======================================= -->
+		<!-- commons-dbcp -->
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>${commons-dbcp.version}</version>
+		</dependency>
+		<!-- commons-fileupload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>${commons-fileupload.version}</version>
+		</dependency>
+		<!-- commons-io -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.version}</version>
+		</dependency>
+		<!-- commons-codec -->
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>${commons-codec.version}</version>
+		</dependency>
+		<!-- ======================================= -->
+		<!-- slf4j-log4j12 -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<!-- slf4j-api -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j-api.version}</version>
+		</dependency>
+		<!-- ======================================= -->
+		<!-- jackson-mapper-asl -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${jackson-mapper-asl.version}</version>
+		</dependency>
+		<!-- fastjson -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${fastjson.version}</version>
+		</dependency>
+		<!-- ======================================= -->
+		<!-- mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql-connector.version}</version>
+		</dependency>
+		<!-- Jedis client -->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>${jedis.version}</version>
+		</dependency>
+		<!-- spring-data-redis -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-redis</artifactId>
+			<version>${spring-data-redis.version}</version>
+		</dependency>
+		<!-- c3p0 -->
+		<dependency>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>${c3p0.version}</version>
+		</dependency>
+		<!-- ======================================= -->
+		<!-- jstl -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl.version}</version>
+		</dependency>
+		<!-- freemarker -->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>${freemarker.version}</version>
+		</dependency>
+		<!-- Quartz -->
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+			<version>${quartz.version}</version>
+		</dependency>
+		<!-- spring-rabbit -->
+		<dependency>
+			<groupId>org.springframework.amqp</groupId>
+			<artifactId>spring-rabbit</artifactId>
+			<version>${spring-rabbit.version}</version>
+		</dependency>
+		<!-- amqp-client -->
+		<dependency>
+			<groupId>com.rabbitmq</groupId>
+			<artifactId>amqp-client</artifactId>
+			<version>${amqp-client.version}</version>
+		</dependency>
+
+		<!-- junit 测试 -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- ======================================= -->
+		<!-- spider-proxy -->
+		<dependency>
+			<groupId>com.uilzzw</groupId>
+			<artifactId>spider-proxy</artifactId>
+			<version>${spider-proxy.version}</version>
+		</dependency>
+	</dependencies>
+	<!-- =========================================== -->
+	<build>
+		<!-- <directory>target</directory> <finalName>ccproxy</finalName> -->
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.6</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+					<!-- http://localhost:8080/manager/text -->
+					<url>http://localhost:8080/manager/text</url>
+					<!-- 此处的名字必须和setting.xml中配置的ID一致 -->
+					<server>tomcat7</server>
+					<!-- 此处的名字是项目发布的工程名 -->
+					<!-- <path>/ccproxy</path> -->
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
