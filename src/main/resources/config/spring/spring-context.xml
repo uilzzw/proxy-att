@@ -10,11 +10,11 @@
                         http://www.springframework.org/schema/mvc  
                         http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
 	<description>Spring Context Configure</description>
-	<context:annotation-config/>
+	<context:annotation-config />
 	<!-- 导入mybatis配置 -->
 	<import resource="classpath:config/spring/spring-mybatis.xml" />
 	<!-- 导入redis配置 -->
 	<import resource="classpath:config/spring/spring-redis.xml" />
 	<!-- 导入rabbitMQ配置 -->
-	<import resource="classpath:config/spring/spring-rabbit.xml" />	
+	<import resource="classpath:config/spring/spring-rabbit.xml" />
 </beans>

@@ -16,11 +16,12 @@
                         http://www.springframework.org/schema/aop/spring-jdbc-4.2.xsd
                         http://www.springframework.org/schema/tx
                         http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
-	
+
 	<description>Redis Connection Configure</description>
 	<!-- 引入jedis配置文件 -->
-	<context:property-placeholder location="classpath:config/redis/redis.properties" ignore-unresolvable="true"/>
-	
+	<context:property-placeholder location="classpath:config/redis/redis.properties"
+		ignore-unresolvable="true" />
+
 	<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
 		<property name="maxTotal" value="${redis.pool.maxTotal}"></property>
 		<property name="maxIdle" value="${redis.pool.maxIdle}"></property>
